@@ -110,8 +110,8 @@ public class ProductRepository implements ProductInterface {
         statement.setString(1,product.getName());
         statement.setFloat(2,product.getPrice());
         statement.executeUpdate();
-        String queryNewAuthor = "SELECT * FROM \"author\" ORDER BY \"id_author\" DESC LIMIT 1";
-        ResultSet resultSet = this.connection.createStatement().executeQuery(queryNewAuthor);
+        String queryNewProduit = "SELECT * FROM \"produit\" ORDER BY \"id_produit\" DESC LIMIT 1";
+        ResultSet resultSet = this.connection.createStatement().executeQuery(queryNewProduit);
         resultSet.next();
         return this.newProduct(resultSet);
     }

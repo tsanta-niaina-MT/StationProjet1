@@ -10,5 +10,5 @@ import lombok.*;
 @EqualsAndHashCode
 
 public class RelationProduct {
-    private String id_station,id_product;
+    private String id_relation, id_station,id_product;
 }
